@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,13 @@
 		467AB47D2464D92B00CB0809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467AB47B2464D92B00CB0809 /* Main.storyboard */; };
 		467AB47F2464D92D00CB0809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467AB47E2464D92D00CB0809 /* Assets.xcassets */; };
 		467AB4822464D92D00CB0809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467AB4802464D92D00CB0809 /* LaunchScreen.storyboard */; };
+		467AB48A2464DA8200CB0809 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 467AB4892464DA8200CB0809 /* GoogleService-Info.plist */; };
+		467AB48C2464E46800CB0809 /* FikirEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB48B2464E46800CB0809 /* FikirEkleVC.swift */; };
+		EBD6D67812C7C562F77A6224 /* Pods_TatliSozluk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC1A5ED488F7144BDB90FBC /* Pods_TatliSozluk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2971727C7D94D1F780055B48 /* Pods-TatliSozluk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatliSozluk.release.xcconfig"; path = "Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk.release.xcconfig"; sourceTree = "<group>"; };
 		467AB4722464D92B00CB0809 /* TatliSozluk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TatliSozluk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467AB4752464D92B00CB0809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		467AB4772464D92B00CB0809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,10 @@
 		467AB47E2464D92D00CB0809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467AB4812464D92D00CB0809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467AB4832464D92D00CB0809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		467AB4892464DA8200CB0809 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		467AB48B2464E46800CB0809 /* FikirEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikirEkleVC.swift; sourceTree = "<group>"; };
+		5AC1A5ED488F7144BDB90FBC /* Pods_TatliSozluk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TatliSozluk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6848FF7B3EFF5B37CFED81EC /* Pods-TatliSozluk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatliSozluk.debug.xcconfig"; path = "Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD6D67812C7C562F77A6224 /* Pods_TatliSozluk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				467AB4742464D92B00CB0809 /* TatliSozluk */,
 				467AB4732464D92B00CB0809 /* Products */,
+				8B8E8CFA1CE93DA6AF073DA1 /* Pods */,
+				87D3CB8FB39035D24CDA81CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +70,31 @@
 				467AB4752464D92B00CB0809 /* AppDelegate.swift */,
 				467AB4772464D92B00CB0809 /* SceneDelegate.swift */,
 				467AB4792464D92B00CB0809 /* ViewController.swift */,
+				467AB48B2464E46800CB0809 /* FikirEkleVC.swift */,
 				467AB47B2464D92B00CB0809 /* Main.storyboard */,
 				467AB47E2464D92D00CB0809 /* Assets.xcassets */,
 				467AB4802464D92D00CB0809 /* LaunchScreen.storyboard */,
 				467AB4832464D92D00CB0809 /* Info.plist */,
+				467AB4892464DA8200CB0809 /* GoogleService-Info.plist */,
 			);
 			path = TatliSozluk;
+			sourceTree = "<group>";
+		};
+		87D3CB8FB39035D24CDA81CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AC1A5ED488F7144BDB90FBC /* Pods_TatliSozluk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B8E8CFA1CE93DA6AF073DA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6848FF7B3EFF5B37CFED81EC /* Pods-TatliSozluk.debug.xcconfig */,
+				2971727C7D94D1F780055B48 /* Pods-TatliSozluk.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467AB4862464D92D00CB0809 /* Build configuration list for PBXNativeTarget "TatliSozluk" */;
 			buildPhases = (
+				F7AB7E3C16CC080427331CFB /* [CP] Check Pods Manifest.lock */,
 				467AB46E2464D92B00CB0809 /* Sources */,
 				467AB46F2464D92B00CB0809 /* Frameworks */,
 				467AB4702464D92B00CB0809 /* Resources */,
+				6629BD6C95110F12182E961A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,10 +160,53 @@
 				467AB4822464D92D00CB0809 /* LaunchScreen.storyboard in Resources */,
 				467AB47F2464D92D00CB0809 /* Assets.xcassets in Resources */,
 				467AB47D2464D92B00CB0809 /* Main.storyboard in Resources */,
+				467AB48A2464DA8200CB0809 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6629BD6C95110F12182E961A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7AB7E3C16CC080427331CFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TatliSozluk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		467AB46E2464D92B00CB0809 /* Sources */ = {
@@ -141,6 +216,7 @@
 				467AB47A2464D92B00CB0809 /* ViewController.swift in Sources */,
 				467AB4762464D92B00CB0809 /* AppDelegate.swift in Sources */,
 				467AB4782464D92B00CB0809 /* SceneDelegate.swift in Sources */,
+				467AB48C2464E46800CB0809 /* FikirEkleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +358,7 @@
 		};
 		467AB4872464D92D00CB0809 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6848FF7B3EFF5B37CFED81EC /* Pods-TatliSozluk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +371,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunus.TatliSozluk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		467AB4882464D92D00CB0809 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2971727C7D94D1F780055B48 /* Pods-TatliSozluk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yunus.TatliSozluk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
