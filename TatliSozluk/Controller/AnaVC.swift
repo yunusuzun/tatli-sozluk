@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class AnaVC: UIViewController {
     @IBOutlet weak var sgmntKategoriler: UISegmentedControl!
@@ -16,6 +17,8 @@ class AnaVC: UIViewController {
     private var fikirler = [Fikir]()
     private var fikirlerCollectionRef: CollectionReference!
     private var fikirlerListener: ListenerRegistration!
+    private var secilenKategori = Kategoriler.Eglence.rawValue
+    private var listenerHandle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,33 +30,74 @@ class AnaVC: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        fikirlerListener.remove()
+        if fikirlerListener != nil {
+            fikirlerListener.remove()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        fikirlerListener = fikirlerCollectionRef.addSnapshotListener { (snapshot, error) in
-            if let error = error {
-                debugPrint("kayıtları getiremedi: \(error.localizedDescription)")
+        listenerHandle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(identifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
             } else {
-                self.fikirler.removeAll()
-                guard let snap = snapshot else { return }
-                for document in snap.documents {
-                    let data = document.data()
-                    
-                    let kullaniciAdi = data[Kullanici_Adi] as? String ?? "Misafir"
-                    let eklenmeTarihi = data[Eklenme_Tarihi] as? Date ?? Date()
-                    let fikirText = data[Fikir_Text] as? String ?? ""
-                    let yorumSayisi = data[Yorum_Sayisi] as? Int ?? 0
-                    let begeniSayisi = data[Begeni_Sayisi] as? Int ?? 0
-                    let documentId = document.documentID
-                    
-                    let yeniFikir = Fikir(kullaniciAdi: kullaniciAdi, eklenmeTarihi: eklenmeTarihi, fikirText: fikirText, yorumSayisi: yorumSayisi, begeniSayisi: begeniSayisi, documentId: documentId)
-                    
-                    self.fikirler.append(yeniFikir)
-                }
-                
-                self.tableView.reloadData()
+                self.setListener()
             }
+        })
+    }
+    
+    func setListener() {
+        if secilenKategori == Kategoriler.Populer.rawValue {
+            fikirlerListener = fikirlerCollectionRef.order(by: Eklenme_Tarihi, descending: true).addSnapshotListener { (snapshot, error) in
+                if let error = error {
+                    debugPrint("kayıtları getiremedi: \(error.localizedDescription)")
+                } else {
+                    self.fikirler.removeAll()
+                    self.fikirler = Fikir.fikirGetir(snapshot: snapshot)
+                    self.tableView.reloadData()
+                }
+            }
+        } else {
+            fikirlerListener = fikirlerCollectionRef.whereField(Kategori, isEqualTo: secilenKategori).order(by: Eklenme_Tarihi, descending: true).addSnapshotListener { (snapshot, error) in
+                if let error = error {
+                    debugPrint("kayıtları getiremedi: \(error.localizedDescription)")
+                } else {
+                    self.fikirler.removeAll()
+                    self.fikirler = Fikir.fikirGetir(snapshot: snapshot)
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
+        
+    }
+    
+    @IBAction func sgmntKategoriChange(_ sender: Any) {
+        switch sgmntKategoriler.selectedSegmentIndex {
+        case 0:
+            secilenKategori = Kategoriler.Eglence.rawValue
+        case 1:
+            secilenKategori = Kategoriler.Absurt.rawValue
+        case 2:
+            secilenKategori = Kategoriler.Gundem.rawValue
+        case 3:
+            secilenKategori = Kategoriler.Populer.rawValue
+        default:
+            secilenKategori = Kategoriler.Eglence.rawValue
+        }
+        
+        fikirlerListener.remove()
+        setListener()
+    }
+    
+    @IBAction func btnExitTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+        } catch let error as NSError {
+            debugPrint("oturum kapatılamadı: \(error.localizedDescription)")
         }
     }
 }

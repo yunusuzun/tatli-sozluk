@@ -19,6 +19,8 @@
 		467AB4822464D92D00CB0809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467AB4802464D92D00CB0809 /* LaunchScreen.storyboard */; };
 		467AB48A2464DA8200CB0809 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 467AB4892464DA8200CB0809 /* GoogleService-Info.plist */; };
 		467AB48C2464E46800CB0809 /* FikirEkleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB48B2464E46800CB0809 /* FikirEkleVC.swift */; };
+		46B38E852469B07E00F8C93A /* GirisVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B38E842469B07E00F8C93A /* GirisVC.swift */; };
+		46B38E872469B21000F8C93A /* KaydolVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B38E862469B21000F8C93A /* KaydolVC.swift */; };
 		EBD6D67812C7C562F77A6224 /* Pods_TatliSozluk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC1A5ED488F7144BDB90FBC /* Pods_TatliSozluk.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		467AB4832464D92D00CB0809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467AB4892464DA8200CB0809 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		467AB48B2464E46800CB0809 /* FikirEkleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikirEkleVC.swift; sourceTree = "<group>"; };
+		46B38E842469B07E00F8C93A /* GirisVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirisVC.swift; sourceTree = "<group>"; };
+		46B38E862469B21000F8C93A /* KaydolVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaydolVC.swift; sourceTree = "<group>"; };
 		5AC1A5ED488F7144BDB90FBC /* Pods_TatliSozluk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TatliSozluk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6848FF7B3EFF5B37CFED81EC /* Pods-TatliSozluk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatliSozluk.debug.xcconfig"; path = "Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +98,8 @@
 			children = (
 				467AB4792464D92B00CB0809 /* AnaVC.swift */,
 				467AB48B2464E46800CB0809 /* FikirEkleVC.swift */,
+				46B38E842469B07E00F8C93A /* GirisVC.swift */,
+				46B38E862469B21000F8C93A /* KaydolVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,9 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46B38E852469B07E00F8C93A /* GirisVC.swift in Sources */,
 				467AB47A2464D92B00CB0809 /* AnaVC.swift in Sources */,
 				4626E89A2468C35A0085F60E /* Sabitler.swift in Sources */,
 				4626E89C2468C7EB0085F60E /* Fikir.swift in Sources */,
+				46B38E872469B21000F8C93A /* KaydolVC.swift in Sources */,
 				4626E8982468C2690085F60E /* Kategoriler.swift in Sources */,
 				467AB4762464D92B00CB0809 /* AppDelegate.swift in Sources */,
 				467AB4782464D92B00CB0809 /* SceneDelegate.swift in Sources */,

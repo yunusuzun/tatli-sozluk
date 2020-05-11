@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class FikirEkleVC: UIViewController {
     @IBOutlet weak var sgmntKategoriler: UISegmentedControl!
@@ -16,7 +16,7 @@ class FikirEkleVC: UIViewController {
     @IBOutlet weak var btnPaylas: UIButton!
     
     let placeholder = "Fikir..."
-    var secilenKategori = "Eglence"
+    var secilenKategori = Kategoriler.Eglence.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
