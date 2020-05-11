@@ -114,5 +114,19 @@ extension AnaVC: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "yorumlarSegue", sender: fikirler[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "yorumlarSegue" {
+            if let hedefVC = segue.destination as? YorumlarVC {
+                if let secilenFikir = sender as? Fikir {
+                    hedefVC.secilenFikir = secilenFikir
+                }
+            }
+        }
+    }
 }
 

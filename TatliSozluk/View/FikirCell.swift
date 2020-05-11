@@ -15,6 +15,7 @@ class FikirCell: UITableViewCell {
     @IBOutlet weak var lblEklenmeTarihi: UILabel!
     @IBOutlet weak var lblBegeniSayisi: UILabel!
     @IBOutlet weak var imgBegeni: UIImageView!
+    @IBOutlet weak var lblYorumSayisi: UILabel!
     
     var secilenFikir: Fikir!
     
@@ -36,6 +37,7 @@ class FikirCell: UITableViewCell {
         lblKullaniciAdi.text = fikir.kullaniciAdi
         lblFikirText.text = fikir.fikirText
         lblBegeniSayisi.text = String(fikir.begeniSayisi)
+        lblYorumSayisi.text = String(fikir.yorumSayisi)
         
         let tarihFormat = DateFormatter()
         tarihFormat.dateFormat = "dd MM YYYY, hh:mm"

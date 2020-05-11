@@ -19,3 +19,5 @@ let Eklenme_Tarihi = "EklenmeTarihi"
 let Kullanicilar_Ref = "Kullanicilar"
 let Kullanici_Olusturulma_Tarihi = "OlusturulmaTerihi"
 
+let Yorumlar_Ref = "Yorumlar"
+let Yorum_Text = "YorumText"
