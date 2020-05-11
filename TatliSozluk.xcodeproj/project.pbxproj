@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4626E8982468C2690085F60E /* Kategoriler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626E8972468C2690085F60E /* Kategoriler.swift */; };
+		4626E89A2468C35A0085F60E /* Sabitler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626E8992468C35A0085F60E /* Sabitler.swift */; };
+		4626E89C2468C7EB0085F60E /* Fikir.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626E89B2468C7EB0085F60E /* Fikir.swift */; };
+		4626E89E2468C9210085F60E /* FikirCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4626E89D2468C9210085F60E /* FikirCell.swift */; };
 		467AB4762464D92B00CB0809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4752464D92B00CB0809 /* AppDelegate.swift */; };
 		467AB4782464D92B00CB0809 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4772464D92B00CB0809 /* SceneDelegate.swift */; };
-		467AB47A2464D92B00CB0809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4792464D92B00CB0809 /* ViewController.swift */; };
+		467AB47A2464D92B00CB0809 /* AnaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467AB4792464D92B00CB0809 /* AnaVC.swift */; };
 		467AB47D2464D92B00CB0809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467AB47B2464D92B00CB0809 /* Main.storyboard */; };
 		467AB47F2464D92D00CB0809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467AB47E2464D92D00CB0809 /* Assets.xcassets */; };
 		467AB4822464D92D00CB0809 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467AB4802464D92D00CB0809 /* LaunchScreen.storyboard */; };
@@ -20,10 +24,14 @@
 
 /* Begin PBXFileReference section */
 		2971727C7D94D1F780055B48 /* Pods-TatliSozluk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatliSozluk.release.xcconfig"; path = "Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk.release.xcconfig"; sourceTree = "<group>"; };
+		4626E8972468C2690085F60E /* Kategoriler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kategoriler.swift; sourceTree = "<group>"; };
+		4626E8992468C35A0085F60E /* Sabitler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sabitler.swift; sourceTree = "<group>"; };
+		4626E89B2468C7EB0085F60E /* Fikir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fikir.swift; sourceTree = "<group>"; };
+		4626E89D2468C9210085F60E /* FikirCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FikirCell.swift; sourceTree = "<group>"; };
 		467AB4722464D92B00CB0809 /* TatliSozluk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TatliSozluk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467AB4752464D92B00CB0809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		467AB4772464D92B00CB0809 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		467AB4792464D92B00CB0809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		467AB4792464D92B00CB0809 /* AnaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaVC.swift; sourceTree = "<group>"; };
 		467AB47C2464D92B00CB0809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		467AB47E2464D92D00CB0809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		467AB4812464D92D00CB0809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,8 +77,9 @@
 			children = (
 				467AB4752464D92B00CB0809 /* AppDelegate.swift */,
 				467AB4772464D92B00CB0809 /* SceneDelegate.swift */,
-				467AB4792464D92B00CB0809 /* ViewController.swift */,
-				467AB48B2464E46800CB0809 /* FikirEkleVC.swift */,
+				46C9F3F72468BD2200CDDD5D /* Model */,
+				46C9F3F62468BD1F00CDDD5D /* View */,
+				46C9F3F52468BD1D00CDDD5D /* Controller */,
 				467AB47B2464D92B00CB0809 /* Main.storyboard */,
 				467AB47E2464D92D00CB0809 /* Assets.xcassets */,
 				467AB4802464D92D00CB0809 /* LaunchScreen.storyboard */,
@@ -78,6 +87,33 @@
 				467AB4892464DA8200CB0809 /* GoogleService-Info.plist */,
 			);
 			path = TatliSozluk;
+			sourceTree = "<group>";
+		};
+		46C9F3F52468BD1D00CDDD5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				467AB4792464D92B00CB0809 /* AnaVC.swift */,
+				467AB48B2464E46800CB0809 /* FikirEkleVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		46C9F3F62468BD1F00CDDD5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4626E89D2468C9210085F60E /* FikirCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46C9F3F72468BD2200CDDD5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4626E8972468C2690085F60E /* Kategoriler.swift */,
+				4626E8992468C35A0085F60E /* Sabitler.swift */,
+				4626E89B2468C7EB0085F60E /* Fikir.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		87D3CB8FB39035D24CDA81CC /* Frameworks */ = {
@@ -213,10 +249,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				467AB47A2464D92B00CB0809 /* ViewController.swift in Sources */,
+				467AB47A2464D92B00CB0809 /* AnaVC.swift in Sources */,
+				4626E89A2468C35A0085F60E /* Sabitler.swift in Sources */,
+				4626E89C2468C7EB0085F60E /* Fikir.swift in Sources */,
+				4626E8982468C2690085F60E /* Kategoriler.swift in Sources */,
 				467AB4762464D92B00CB0809 /* AppDelegate.swift in Sources */,
 				467AB4782464D92B00CB0809 /* SceneDelegate.swift in Sources */,
 				467AB48C2464E46800CB0809 /* FikirEkleVC.swift in Sources */,
+				4626E89E2468C9210085F60E /* FikirCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

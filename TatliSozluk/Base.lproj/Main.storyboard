@@ -10,11 +10,101 @@
         <!--Tatlı Sözlük-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TatliSozluk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnaVC" customModule="TatliSozluk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-JF-kOc">
+                                <rect key="frame" x="20" y="20" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Eğlence"/>
+                                    <segment title="Absürt"/>
+                                    <segment title="Gündem"/>
+                                    <segment title="Popüler"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sgmntKategoriDegisti:" destination="Td6-Ej-JrH" eventType="valueChanged" id="ptn-gg-DL1"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Vy-KL-hot">
+                                <rect key="frame" x="0.0" y="71" width="414" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fikirCell" rowHeight="100" id="jkQ-ud-ZbE" customClass="FikirCell" customModule="TatliSozluk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jkQ-ud-ZbE" id="Stt-r6-Ebr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanici Adi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TN-t4-EY6">
+                                                    <rect key="frame" x="20" y="11" width="95" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarih" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIE-0e-Ycf">
+                                                    <rect key="frame" x="125" y="13" width="31.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="GxS-CV-CNS">
+                                                    <rect key="frame" x="20" y="66" width="56.5" height="20.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cMU-mr-w2l">
+                                                            <rect key="frame" x="0.0" y="0.0" width="22" height="20.5"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfc-55-NcX">
+                                                            <rect key="frame" x="28" y="0.0" width="28.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yorum" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8UU-il-c3g">
+                                                    <rect key="frame" x="20" y="31.5" width="374" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8UU-il-c3g" firstAttribute="top" secondItem="9TN-t4-EY6" secondAttribute="bottom" id="04H-Bv-wZq"/>
+                                                <constraint firstItem="9TN-t4-EY6" firstAttribute="leading" secondItem="Stt-r6-Ebr" secondAttribute="leadingMargin" id="5Yw-ZI-RiQ"/>
+                                                <constraint firstItem="9TN-t4-EY6" firstAttribute="top" secondItem="Stt-r6-Ebr" secondAttribute="topMargin" id="Cgt-xK-chd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8UU-il-c3g" secondAttribute="trailing" id="GIN-4M-RKp"/>
+                                                <constraint firstItem="dIE-0e-Ycf" firstAttribute="centerY" secondItem="9TN-t4-EY6" secondAttribute="centerY" id="W73-K9-Zvw"/>
+                                                <constraint firstItem="8UU-il-c3g" firstAttribute="leading" secondItem="Stt-r6-Ebr" secondAttribute="leadingMargin" id="Z51-4e-pbs"/>
+                                                <constraint firstItem="GxS-CV-CNS" firstAttribute="top" secondItem="8UU-il-c3g" secondAttribute="bottom" constant="15" id="jZD-UA-ePu"/>
+                                                <constraint firstItem="dIE-0e-Ycf" firstAttribute="leading" secondItem="9TN-t4-EY6" secondAttribute="trailing" constant="10" id="qzC-u3-Q2c"/>
+                                                <constraint firstItem="GxS-CV-CNS" firstAttribute="leading" secondItem="Stt-r6-Ebr" secondAttribute="leadingMargin" id="vNd-Ze-r1k"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="GxS-CV-CNS" secondAttribute="bottom" constant="2.5" id="yw0-mv-hUK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgBegeni" destination="cMU-mr-w2l" id="4DG-ER-BV8"/>
+                                            <outlet property="lblBegeniSayisi" destination="Hfc-55-NcX" id="KxU-iv-464"/>
+                                            <outlet property="lblEklenmeTarihi" destination="dIE-0e-Ycf" id="t1O-Du-jrs"/>
+                                            <outlet property="lblFikirText" destination="8UU-il-c3g" id="dVU-QN-kcC"/>
+                                            <outlet property="lblKullaniciAdi" destination="9TN-t4-EY6" id="gyU-Nw-pUc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Vy-KL-hot" firstAttribute="top" secondItem="bDd-JF-kOc" secondAttribute="bottom" constant="20" id="6jn-8r-qIp"/>
+                            <constraint firstItem="bDd-JF-kOc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9WH-iR-Pd1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Vy-KL-hot" secondAttribute="trailing" id="EsU-Hu-KQN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6Vy-KL-hot" secondAttribute="bottom" id="Rl0-bh-CGW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bDd-JF-kOc" secondAttribute="trailing" constant="20" id="UUR-N8-74t"/>
+                            <constraint firstItem="6Vy-KL-hot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ceX-Ge-UsA"/>
+                            <constraint firstItem="bDd-JF-kOc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kSu-Jv-Q68"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tatlı Sözlük" id="nNH-lO-MSn">
@@ -24,6 +114,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="sgmntKategoriler" destination="bDd-JF-kOc" id="fnN-EK-hh6"/>
+                        <outlet property="tableView" destination="6Vy-KL-hot" id="AQ5-RF-dzG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,9 +137,9 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HLR-Ez-3Jk">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="32"/>
                                         <segments>
-                                            <segment title="First"/>
+                                            <segment title="Eğlence"/>
                                             <segment title="Absürt"/>
-                                            <segment title="Spor"/>
+                                            <segment title="Gündem"/>
                                         </segments>
                                         <connections>
                                             <action selector="sgmntKategoriDegisti:" destination="Td6-Ej-JrH" eventType="valueChanged" id="wfE-L9-ZGa"/>
@@ -125,5 +219,6 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
