@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46172142246CC60F00BA89FA /* YorumDuzenleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46172141246CC60F00BA89FA /* YorumDuzenleVC.swift */; };
 		461FCA7A2469CAB7000D5851 /* YorumlarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FCA792469CAB7000D5851 /* YorumlarVC.swift */; };
 		461FCA7C2469CF58000D5851 /* YorumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FCA7B2469CF58000D5851 /* YorumCell.swift */; };
 		461FCA7E2469D297000D5851 /* Yorum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461FCA7D2469D297000D5851 /* Yorum.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		2971727C7D94D1F780055B48 /* Pods-TatliSozluk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TatliSozluk.release.xcconfig"; path = "Target Support Files/Pods-TatliSozluk/Pods-TatliSozluk.release.xcconfig"; sourceTree = "<group>"; };
+		46172141246CC60F00BA89FA /* YorumDuzenleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumDuzenleVC.swift; sourceTree = "<group>"; };
 		461FCA792469CAB7000D5851 /* YorumlarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumlarVC.swift; sourceTree = "<group>"; };
 		461FCA7B2469CF58000D5851 /* YorumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YorumCell.swift; sourceTree = "<group>"; };
 		461FCA7D2469D297000D5851 /* Yorum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yorum.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				46B38E842469B07E00F8C93A /* GirisVC.swift */,
 				46B38E862469B21000F8C93A /* KaydolVC.swift */,
 				461FCA792469CAB7000D5851 /* YorumlarVC.swift */,
+				46172141246CC60F00BA89FA /* YorumDuzenleVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				461FCA7A2469CAB7000D5851 /* YorumlarVC.swift in Sources */,
 				461FCA7C2469CF58000D5851 /* YorumCell.swift in Sources */,
 				4626E89E2468C9210085F60E /* FikirCell.swift in Sources */,
+				46172142246CC60F00BA89FA /* YorumDuzenleVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +440,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CS5U6H6N2L;
 				INFOPLIST_FILE = TatliSozluk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CS5U6H6N2L;
 				INFOPLIST_FILE = TatliSozluk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

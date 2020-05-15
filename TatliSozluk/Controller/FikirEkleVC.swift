@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class FikirEkleVC: UIViewController {
     @IBOutlet weak var sgmntKategoriler: UISegmentedControl!
@@ -27,6 +28,7 @@ class FikirEkleVC: UIViewController {
         txtFikir.layer.borderColor = UIColor.lightGray.cgColor
         txtFikir.text = placeholder
         txtFikir.textColor = UIColor.lightGray
+        txtFikir.delegate = self
     }
     
     @IBAction func btnPaylasPressed(_ sender: Any) {
@@ -39,7 +41,8 @@ class FikirEkleVC: UIViewController {
             Yorum_Sayisi: 0,
             Fikir_Text: fikirText,
             Eklenme_Tarihi: FieldValue.serverTimestamp(),
-            Kullanici_Adi: kullaniciAdi
+            Kullanici_Adi: kullaniciAdi,
+            Kullanici_Id: Auth.auth().currentUser?.uid ?? ""
         ]) { (error) in
             if let error = error {
                 print("Döküman hatası: \(error.localizedDescription)")

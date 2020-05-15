@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseFirestore
 
 class Fikir {
     private(set) var kullaniciAdi: String!
@@ -16,14 +16,16 @@ class Fikir {
     private(set) var yorumSayisi: Int!
     private(set) var begeniSayisi: Int!
     private(set) var documentId: String!
+    private(set) var kullaniciId: String!
     
-    init(kullaniciAdi: String, eklenmeTarihi: Date, fikirText: String, yorumSayisi: Int, begeniSayisi: Int, documentId: String) {
+    init(kullaniciAdi: String, eklenmeTarihi: Date, fikirText: String, yorumSayisi: Int, begeniSayisi: Int, documentId: String, kullaniciId: String) {
         self.kullaniciAdi = kullaniciAdi
         self.eklenmeTarihi = eklenmeTarihi
         self.fikirText = fikirText
         self.yorumSayisi = yorumSayisi
         self.begeniSayisi = begeniSayisi
         self.documentId = documentId
+        self.kullaniciId = kullaniciId
     }
     
     class func fikirGetir(snapshot: QuerySnapshot?) -> [Fikir] {
@@ -40,8 +42,9 @@ class Fikir {
             let yorumSayisi = data[Yorum_Sayisi] as? Int ?? 0
             let begeniSayisi = data[Begeni_Sayisi] as? Int ?? 0
             let documentId = document.documentID
+            let kullaniciId = data[Kullanici_Id] as? String ?? ""
             
-            let yeniFikir = Fikir(kullaniciAdi: kullaniciAdi, eklenmeTarihi: eklenmeTarihi, fikirText: fikirText, yorumSayisi: yorumSayisi, begeniSayisi: begeniSayisi, documentId: documentId)
+            let yeniFikir = Fikir(kullaniciAdi: kullaniciAdi, eklenmeTarihi: eklenmeTarihi, fikirText: fikirText, yorumSayisi: yorumSayisi, begeniSayisi: begeniSayisi, documentId: documentId, kullaniciId: kullaniciId)
             
             fikirler.append(yeniFikir)
         }

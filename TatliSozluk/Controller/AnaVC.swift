@@ -109,7 +109,7 @@ extension AnaVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "fikirCell", for: indexPath) as? FikirCell {
-            cell.gorunumAyarla(fikir: fikirler[indexPath.row])
+            cell.gorunumAyarla(fikir: fikirler[indexPath.row], delegate: self)
             return cell
         }
         return UITableViewCell()
@@ -130,3 +130,9 @@ extension AnaVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+
+extension AnaVC: FikirDelegate {
+    func seceneklerFikirPressed(fikir: Fikir) {
+        
+    }
+}
