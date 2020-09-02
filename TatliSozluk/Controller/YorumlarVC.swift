@@ -50,7 +50,7 @@ class YorumlarVC: UIViewController {
     }
 
     @IBAction func btnYorumTapped(_ sender: Any) {
-        guard let yorumText = txtYorum.text else { return }
+        guard let yorumText = txtYorum.text,txtYorum.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty != true else { return }
         
         firestore.runTransaction({ (transaction, error) -> Any? in
             let secilenFikirKayit: DocumentSnapshot

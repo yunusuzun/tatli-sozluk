@@ -18,6 +18,7 @@ class FikirEkleVC: UIViewController {
     
     let placeholder = "Fikir..."
     var secilenKategori = Kategoriler.Eglence.rawValue
+    var kullaniciAdi: String = "misafir"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +30,21 @@ class FikirEkleVC: UIViewController {
         txtFikir.text = placeholder
         txtFikir.textColor = UIColor.lightGray
         txtFikir.delegate = self
+        txtKullaniciAdi.isEnabled = false
+        if let adi = Auth.auth().currentUser?.displayName {
+            kullaniciAdi = adi
+            txtKullaniciAdi.text = kullaniciAdi
+        }
     }
     
     @IBAction func btnPaylasPressed(_ sender: Any) {
-        guard let kullaniciAdi = txtKullaniciAdi.text else { return }
-        guard let fikirText = txtFikir.text else { return }
+        guard txtFikir.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty != true else { return }
         
         Firestore.firestore().collection("Fikirler").addDocument(data: [
             Kategori: secilenKategori,
             Begeni_Sayisi: 0,
             Yorum_Sayisi: 0,
-            Fikir_Text: fikirText,
+            Fikir_Text: txtFikir.text!,
             Eklenme_Tarihi: FieldValue.serverTimestamp(),
             Kullanici_Adi: kullaniciAdi,
             Kullanici_Id: Auth.auth().currentUser?.uid ?? ""
